@@ -27,9 +27,9 @@
     </button>
     <p *ngIf="passwordStatus" class="mt-3">Secret Password: {{ password }}</p>
     <div
-      *ngFor="let click of clicks"
-      [ngStyle]="{ backgroundColor: click >= 5 ? 'blue' : 'transparent' }"
-      [ngClass]="{ white: click >= 5 }"
+      *ngFor="let click of clicks; let i = index"
+      [ngStyle]="{ backgroundColor: i >= 5 ? 'blue' : 'transparent' }"
+      [ngClass]="{ white: i >= 5 }"
     >
       {{ click }}
     </div>
